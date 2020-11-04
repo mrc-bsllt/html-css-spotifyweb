@@ -11,9 +11,16 @@ body {
 p {
   font-size: 17px;
 }
+a {
+  color: #919496;
+}
 a:hover {
   text-decoration: none;
   color: #ffffff;
+}
+.active {
+  color: #ffffff;
+  font-weight: 600;
 }
 .white {
   color: #ffffff;
@@ -80,9 +87,24 @@ main {
   font-weight: 600;
 }
 /* /logo */
-.nav_tools {
-  height: 100px;
+
+/* nav tools */
+.list_tools li {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  font-weight: 400;
 }
+.list_tools li:first-child {
+  border-left: 4px solid #1db954;
+  padding-left: 11px;
+}
+.list_tools i {
+  font-size: 25px;
+  margin-right: 10px;
+}
+/* /nav tools */
+
 .playlist {
   height: 100px;
   background-color: yellow;
@@ -229,8 +251,13 @@ footer {
   .logo_image i {
     font-size: 30px;
   }
-
   /* /logo */
+
+  /* nav_tools */
+  .list_tools li:first-child {
+    border-left: 0;
+  }
+  /* /nav_tools */
 
   /* account */
   .account {
