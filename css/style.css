@@ -15,25 +15,7 @@ a:hover {
 }
 /* /generale */
 
-/* main */
-main {
-  height: calc(100vh - 100px);
-}
-#nav_bar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 200px;
-  height: calc(100% - 100px);
-  background-color: #000000;
-}
-#main_content {
-  width: calc(100% - 200px);
-  height: 100%;
-  margin-left: 200px;
-  background-color: #080d19;
-  overflow-y: scroll;
-}
+/* scroll-bar */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -42,6 +24,32 @@ main {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+/* /scroll-bar */
+
+/* main */
+main {
+  height: calc(100vh - 100px);
+}
+
+/* nav bar */
+#nav_bar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: calc(100% - 100px);
+  background-color: #000000;
+}
+/* /nav bar */
+
+/* main content */
+#main_content {
+  width: calc(100% - 200px);
+  height: 100%;
+  margin-left: 200px;
+  background-color: #080d19;
+  overflow-y: scroll;
 }
 #up_grade {
   position: fixed;
@@ -55,7 +63,7 @@ main {
   padding-right: 30px;
   background-color: rgba(0, 0, 0, 0.6);
 }
-#btn_up_grade {
+.btn_up_grade {
   padding: 10px 30px;
   font-size: 12px;
   border: 1px solid #ffffff;
@@ -70,6 +78,7 @@ main {
   margin-top: 100px;
   padding: 20px;
 }
+/* /main content */
 /* /main */
 
 /* footer */
