@@ -60,17 +60,18 @@ main {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 30px;
+  padding-right: 20px;
   background-color: rgba(0, 0, 0, 0.6);
 }
 .btn_up_grade {
   padding: 10px 30px;
   font-size: 12px;
+  font-weight: 600;
   border: 1px solid #ffffff;
   border-radius: 30px;
   background-color: transparent;
 }
-#btn_up_grade:hover a {
+.btn_up_grade:hover a {
   font-size: 13px;
   color: #ffffff;
 }
@@ -88,11 +89,43 @@ footer {
   bottom: 0;
   width: 100%;
   height: 100px;
+  display: flex;
   background-color: #1c1c1c;
+}
+.song {
+  width: 200px;
+  background-color: yellow;
+}
+.player {
+  width: calc(100% - 400px);
+}
+.tools {
+  width: 200px;
+  background-color: orange;
 }
 /* /footer */
 
 /* media query */
+
+/* md */
+@media screen and (max-width: 992px) {
+
+  /* footer */
+  .song {
+    width: 150px;
+  }
+  .player {
+    width: calc(100% - 300px);
+  }
+  .tools {
+    width: 150px;
+  }
+
+  /* /footer */
+
+
+}
+/* /md */
 
 /* xs */
 @media screen and (max-width: 768px) {
