@@ -8,6 +8,10 @@ body {
   width: 100%;
   height: 100vh;
 }
+hr {
+  width: 92%;
+  margin: 2px auto;
+}
 p {
   font-size: 17px;
 }
@@ -92,7 +96,7 @@ main {
 .list_tools li {
   display: flex;
   align-items: center;
-  padding: 10px 15px;
+  padding: 7px 15px;
   font-weight: 400;
 }
 .list_tools li:first-child {
@@ -100,14 +104,46 @@ main {
   padding-left: 11px;
 }
 .list_tools i {
-  font-size: 25px;
+  font-size: 20px;
   margin-right: 10px;
+}
+.list_tools a {
+  font-size: 13px;
+  font-weight: 600;
 }
 /* /nav tools */
 
 .playlist {
-  height: 100px;
-  background-color: yellow;
+  padding: 0 15px;
+}
+.playlist h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.playlist_tools {
+  display: flex;
+  align-items: center;
+}
+.playlist_tools:hover {
+  color: #ffffff;
+  transition: 0.7s;
+}
+.playlist_tools:hover i {
+  background-color: #ffffff;
+  transition: 0.7s;
+}
+.playlist_tools i {
+  margin-right: 10px;
+  color: #000000;
+  background-color: #919496;
+  padding: 10px;
+  font-size: 20px;
+}
+.playlist_tools p {
+  margin: 0;
+}
+.list_playlist li {
+  margin: 15px 0;
 }
 /* account */
 .account {
@@ -118,8 +154,8 @@ main {
   background-color: #000000;
 }
 .app_installer {
-  padding: 10px;
-  border-bottom: 1px solid #919496;
+  padding: 10px 15px;
+  /* border-bottom: 1px solid #919496; */
 }
 .app_installer i,
 .app_installer p {
@@ -212,7 +248,7 @@ footer {
 }
 /* /footer */
 
-/* media query */
+/* media query width */
 
 /* md */
 @media screen and (max-width: 992px) {
@@ -244,6 +280,7 @@ footer {
   /* logo */
   .logo {
     height: auto;
+    margin-bottom: 10px;
   }
   .logo_image {
     width: 100%;
@@ -262,9 +299,6 @@ footer {
   /* account */
   .account {
     width: 50px;
-  }
-  .app_installer {
-    border-bottom: 0;
   }
   .app_installer i {
     width: 100%;
@@ -292,4 +326,32 @@ footer {
 }
 /* /xs */
 
-/* /media query */
+/* /media query width */
+
+/* media query height */
+@media screen and (max-height: 715px) {
+
+  .list_playlist {
+    overflow: scroll;
+  }
+
+}
+
+@media screen and (max-height: 640px) {
+
+  .personal_account,
+  hr {
+    display: none;
+  }
+
+}
+
+@media screen and (max-height: 570px) {
+
+  .app_installer {
+    display: none;
+  }
+
+}
+
+/* /media query height */
