@@ -127,6 +127,7 @@ main {
 .playlist_tools:hover {
   color: #ffffff;
   transition: 0.7s;
+  cursor: pointer;
 }
 .playlist_tools:hover i {
   background-color: #ffffff;
@@ -208,7 +209,7 @@ main {
   justify-content: flex-end;
   align-items: center;
   padding-right: 20px;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 .btn_up_grade {
   padding: 10px 30px;
@@ -220,10 +221,43 @@ main {
 .btn_up_grade:hover {
   transform: scale(1.1);
 }
+/* evidence */
 #evidence {
   margin-top: 100px;
   padding: 20px;
 }
+.list_evidence {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.list_evidence li {
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+/* /evidence */
+/* recently played */
+#recently_played {
+  padding: 20px;
+}
+#recently_played h2 {
+  font-size: 40px;
+  font-weight: 700;
+}
+.block_artists::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.artist {
+  float: left;
+  width: calc(100% / 6);
+  padding: 10px;
+}
+.artist > img {
+  width: 100%;
+}
+/*/ recently played */
 /* /main content */
 /* /main */
 
@@ -253,6 +287,10 @@ footer {
 /* md */
 @media screen and (max-width: 992px) {
 
+  .artist {
+    width: calc(100% / 4);
+  }
+
   /* footer */
   .song {
     width: 150px;
@@ -271,7 +309,7 @@ footer {
 /* /md */
 
 /* xs */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   /* main */
   #nav_bar {
     width: 50px;
@@ -322,6 +360,10 @@ footer {
     width: calc(100% - 50px);
   }
   /* /main */
+
+  .artist {
+    width: calc(100% / 2);
+  }
 
 }
 /* /xs */
