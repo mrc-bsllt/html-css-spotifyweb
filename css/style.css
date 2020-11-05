@@ -217,8 +217,8 @@ main {
   border-radius: 30px;
   background-color: transparent;
 }
-.btn_up_grade:hover a {
-  font-size: 13px;
+.btn_up_grade:hover {
+  transform: scale(1.1);
 }
 #evidence {
   margin-top: 100px;
