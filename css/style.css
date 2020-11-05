@@ -1,399 +1,157 @@
-/* generale */
-body {
-  font-family: 'Montserrat', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   color: #919496;
+  font-size: 14px;
   font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
 }
-.wrapper {
+
+/* generale */
+#wrapper {
   width: 100%;
   height: 100vh;
 }
-hr {
-  width: 92%;
-  margin: 2px auto;
-}
-p {
-  font-size: 17px;
-}
 a {
-  color: #919496;
-}
-a:hover {
   text-decoration: none;
-  color: #ffffff;
 }
-.active {
-  color: #ffffff;
-  font-weight: 600;
+.btn {
+  padding: 10px 20px;
+  color: white;
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  text-transform: uppercase;
 }
-.white {
-  color: #ffffff;
+.btn:hover {
+  transform: scale(1.1);
+}
+.nav_list > li.active {
+  padding-left: 11px;
+  border-left: 4px solid green;
 }
 /* /generale */
 
-/* scroll-bar */
-::-webkit-scrollbar {
-  width: 10px;
+/* aside */
+aside {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: calc(100vh - 90px);
+  min-height: 450px;
+  background-color: #000000;
+  overflow-y: hidden;
 }
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
+#aside_top  {
+  height: calc(100% - 110px);
 }
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
+#aside_top > img {
+  width: 150px;
+  margin-left: 15px;
+  margin-top: 15px;
 }
-/* /scroll-bar */
+#aside_top > i {
+  display: none;
+}
+nav .nav_list {
+  margin-top: 20px;
+}
+.nav_list > li {
+  margin: 15px 0;
+  padding-left: 15px;
+}
+.nav_list > li a {
+  display: flex;
+  align-items: center;
+}
+.nav_list > li:hover i,
+.nav_list > li:hover span {
+  color: #ffffff;
+}
+.nav_list > li i {
+  font-size: 25px;
+  margin-right: 10px;
+}
+#aside_bottom {
+  height: 110px;
+  background-color: yellow;
+}
+/* /aside */
 
 /* main */
 main {
-  height: calc(100vh - 100px);
-}
-
-/* nav bar */
-#nav_bar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 250px;
-  height: calc(100% - 100px);
-  background-color: #000000;
-}
-/* logo */
-#logo {
-  height: 80px;
-}
-#logo::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.logo_image {
-  float: left;
-  width: 20%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.logo_image i {
-  font-size: 40px;
-}
-.logo_title {
-  float: left;
-  width: 80%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.logo_title h1 {
-  margin: 0;
-  font-size: 35px;
-  font-weight: 600;
-}
-/* /logo */
-
-/* nav tools */
-#nav_tools .list_tools li {
-  display: flex;
-  align-items: center;
-  padding: 7px 15px;
-  font-weight: 400;
-}
-#nav_tools .list_tools li:first-child {
-  border-left: 4px solid #1db954;
-  padding-left: 11px;
-}
-.list_tools i {
-  font-size: 20px;
-  margin-right: 10px;
-}
-.list_tools a {
-  font-size: 13px;
-  font-weight: 600;
-}
-/* /nav tools */
-
-#playlist {
-  padding: 0 15px;
-}
-#playlist h3 {
-  font-size: 20px;
-  font-weight: 600;
-}
-.playlist_tools {
-  display: flex;
-  align-items: center;
-}
-.playlist_tools:hover {
-  color: #ffffff;
-  transition: 0.7s;
-  cursor: pointer;
-}
-.playlist_tools:hover i {
-  background-color: #ffffff;
-  transition: 0.7s;
-}
-.playlist_tools i {
-  margin-right: 10px;
-  color: #000000;
-  background-color: #919496;
-  padding: 10px;
-  font-size: 20px;
-}
-.playlist_tools p {
-  margin: 0;
-}
-.list_playlist li {
-  margin: 15px 0;
-}
-/* account */
-#account {
-  position: fixed;
-  left: 0;
-  bottom: 100px;
-  width: 250px;
-  background-color: #000000;
-}
-.app_installer {
-  padding: 10px 15px;
-  /* border-bottom: 1px solid #919496; */
-}
-.app_installer i,
-.app_installer p {
-  display: inline-block;
-}
-.app_installer p {
-  margin-left: 10px;
-  margin-bottom: 0;
-  cursor: pointer;
-}
-.app_installer p:hover {
-  color: #ffffff;
-}
-.personal_account {
-  padding: 10px;
-}
-.personal_account img {
-  width: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.personal_account img:hover {
-  border: 2px solid #919496;
-}
-.personal_account a {
-  font-size: 20px;
-  margin-left: 10px;
-}
-.personal_account a:hover {
-  text-decoration: underline;
-}
-/* /account */
-/* /nav bar */
-
-/* main content */
-#main_content {
-  width: calc(100% - 250px);
-  height: 100%;
-  margin-left: 250px;
+  width: calc(100% - 200px);
+  height: calc(100vh - 90px);
+  margin-left: 200px;
   background-color: #080d19;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 #up_grade {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: calc(100% - 250px);
-  height: 100px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 20px;
+  height: 100px;
+  padding: 20px;
   background-color: rgba(0, 0, 0, 0.4);
 }
-.btn_up_grade {
-  padding: 10px 30px;
-  font-size: 12px;
-  border: 1px solid #ffffff;
-  border-radius: 30px;
-  background-color: transparent;
-}
-.btn_up_grade:hover {
-  transform: scale(1.1);
-}
-/* evidence */
-#evidence {
-  margin-top: 100px;
-  padding: 20px;
-}
-.list_evidence {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.list_evidence li {
-  padding: 0 20px;
-  margin-bottom: 20px;
-}
-/* /evidence */
-/* recently played */
-#recently_played {
-  padding: 20px;
-}
-#recently_played h2 {
-  font-size: 40px;
-  font-weight: 700;
-}
-.block_artists::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.artist {
-  float: left;
-  width: calc(100% / 6);
-  padding: 10px;
-}
-.artist > img {
-  width: 100%;
-}
-/*/ recently played */
-/* /main content */
 /* /main */
 
 /* footer */
 footer {
   position: fixed;
-  left: 0;
   bottom: 0;
+  left: 0;
   width: 100%;
-  height: 100px;
-  display: flex;
+  height: 90px;
   background-color: #1c1c1c;
-}
-.song {
-  width: 200px;
-}
-.player {
-  width: calc(100% - 400px);
-}
-.footer_tools {
-  width: 200px;
 }
 /* /footer */
 
-/* media query width */
-
-/* md */
-@media screen and (max-width: 992px) {
-
-  .artist {
-    width: calc(100% / 4);
-  }
-
-  /* footer */
-  .song {
-    width: 150px;
-  }
-  .player {
-    width: calc(100% - 300px);
-  }
-  .footer_tools {
-    width: 150px;
-  }
-
-  /* /footer */
-
-
-}
-/* /md */
-
-/* xs */
 @media screen and (max-width: 767px) {
-  /* main */
-  #nav_bar {
-    width: 50px;
-    padding: 5px 0;
-  }
-  /* logo */
-  #logo {
-    height: auto;
-    margin-bottom: 10px;
-  }
-  .logo_image {
-    width: 100%;
-  }
-  .logo_image i {
-    font-size: 30px;
-  }
-  /* /logo */
 
-  /* nav_tools */
-  #nav_tools .list_tools li:first-child {
+  /* generale */
+  .nav_list > li.active {
+    padding: 0;
     border-left: 0;
   }
-  /* /nav_tools */
+  /* /generale */
 
-  /* account */
-  #account {
-    width: 50px;
+  /* aside */
+  aside {
+    width: 70px;
   }
-  .app_installer i {
-    width: 100%;
+  #aside_top {
+    padding: 5px;
+  }
+  #aside_top > img {
+    display: none;
+  }
+  #aside_top > i {
+    display: block;
     text-align: center;
-    font-size: 20px;
-    cursor: pointer;
-  }
-  .app_installer i:hover {
+    font-size: 40px;
     color: #ffffff;
   }
-  .personal_account img {
-    width: 30px;
+  .nav_list > li {
+    padding: 0;
   }
-  /* /account */
+  .nav_list > li span {
+    display: none;
+  }
+  .nav_list > li a i {
+    margin: 0;
+  }
+  .nav_list > li a {
+    justify-content: center;
+  }
+  /* /aside */
 
-  #main_content {
-    width: calc(100% - 50px);
-    margin-left: 50px;
-  }
-  #up_grade {
-    width: calc(100% - 50px);
+  /* main */
+  main {
+    width: calc(100% - 70px);
+    margin-left: 70px;
   }
   /* /main */
 
-  .artist {
-    width: calc(100% / 2);
-  }
-
 }
-/* /xs */
-
-/* /media query width */
-
-/* media query height */
-@media screen and (max-height: 715px) {
-
-  .list_playlist {
-    overflow: scroll;
-  }
-
-}
-
-@media screen and (max-height: 640px) {
-
-  .personal_account,
-  hr {
-    display: none;
-  }
-
-}
-
-@media screen and (max-height: 570px) {
-
-  .app_installer {
-    display: none;
-  }
-
-}
-
-/* /media query height */
