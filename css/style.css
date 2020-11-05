@@ -58,6 +58,7 @@ aside {
   width: 150px;
   margin-left: 15px;
   margin-top: 15px;
+  cursor: pointer;
 }
 #aside_top > i {
   display: none;
@@ -117,7 +118,42 @@ nav .nav_list {
 }
 #aside_bottom {
   height: 110px;
-  background-color: yellow;
+  padding: 0 15px;
+  background-color: #000000;
+}
+.installer {
+  display: flex;
+  align-items: center;
+  height: 50%;
+  border-bottom: 1px solid #919496;
+}
+.installer a:hover i,
+.installer a:hover span {
+  color: #ffffff;
+}
+.installer i {
+  margin-right: 5px;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  height: 50%;
+}
+.profile > img {
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.profile > img:hover {
+  border: 2px solid #919496;
+}
+.profile a {
+  margin-left: 5px;
+  color: #ffffff;
+  font-size: 15px;
+}
+.profile a:hover {
+  text-decoration: underline;
 }
 /* /aside */
 
@@ -188,6 +224,22 @@ footer {
     justify-content: center;
   }
   .playlist {
+    display: none;
+  }
+  .installer {
+    justify-content: center;
+    border-bottom: 0;
+  }
+  .installer i {
+    font-size: 25px;
+  }
+  .installer span {
+    display: none;
+  }
+  .profile {
+    justify-content: center;
+  }
+  .profile a {
     display: none;
   }
   /* /aside */
