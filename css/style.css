@@ -22,7 +22,7 @@ h2 {
 h4 {
   color: #ffffff;
   font-size: 23px;
-  margin: 10px 0;
+  margin: 10px 0 5px 0;
 }
 a {
   text-decoration: none;
@@ -432,7 +432,6 @@ footer::after {
 }
 /* /footer */
 
-
 /* medium device */
 @media screen and (max-width: 1199px) {
 
@@ -444,7 +443,6 @@ footer::after {
 
 }
 /* /medium device */
-
 
 /* small device */
 @media screen and (max-width: 991px) {
