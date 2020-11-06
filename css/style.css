@@ -93,7 +93,6 @@ aside {
   display: flex;
   flex-direction: column;
   background-color: #000000;
-  overflow-y: hidden;
 }
 #aside_top  {
   height: calc(100% - 110px);
@@ -154,9 +153,6 @@ nav .nav_list {
   color: #ffffff;
   transition: 0.5s;
 }
-.list_playlist {
-  overflow-y: auto;
-}
 .list_playlist li {
   margin: 20px 0;
 }
@@ -193,7 +189,9 @@ nav .nav_list {
   cursor: pointer;
 }
 .profile > img:hover {
-  border: 2px solid #919496;
+  box-sizing: content-box;
+  border: 3px solid #919496;
+  transition: 0.2s;
 }
 .profile a {
   margin-left: 5px;
