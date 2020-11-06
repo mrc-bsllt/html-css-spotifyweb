@@ -213,6 +213,7 @@ footer::after {
 }
 .track_left a:last-child:hover {
   color: #919496;
+  text-decoration: underline;
 }
 .track_right {
   width: 25%;
@@ -232,6 +233,43 @@ footer::after {
   float: left;
   width: calc(100% - 600px);
   height: 100%;
+}
+.player_top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+}
+.player_top i {
+  font-size: 18px;
+  padding: 0 15px;
+  color: #ffffff;
+}
+.player_top i:nth-child(3) {
+  font-size: 30px;
+}
+.player_bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+}
+.bar {
+  position: relative;
+  width: 60%;
+  height: 3px;
+  background-color: #919496;
+  border-radius: 1.5px;
+}
+.bar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15%;
+  height: 3px;
+  border-radius: 1.5px;
+  background-color: #ffffff;
 }
 .tools {
   float: left;
