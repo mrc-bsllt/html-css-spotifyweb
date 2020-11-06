@@ -206,6 +206,30 @@ main {
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.4);
 }
+#main_content {
+  padding: 20px;
+}
+.list_main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-transform: uppercase;
+}
+.list_main li {
+  padding: 0 15px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.list_main li:first-child::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 3px;
+  left: 30%;
+  width: 50%;
+  height: 3px;
+  background-color: green;
+}
 /* /main */
 
 /* footer */
@@ -334,6 +358,9 @@ footer::after {
 
 
 @media screen and (max-width: 991px) {
+
+  /* main */
+  /* /main */
 
   /* footer */
   .track {
