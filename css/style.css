@@ -91,6 +91,8 @@ aside {
   width: 300px;
   height: calc(100vh - 90px);
   min-height: 450px;
+  display: flex;
+  flex-direction: column;
   background-color: #000000;
 }
 #aside_top  {
@@ -444,6 +446,10 @@ footer::after {
   .artists_list .artist {
     width: calc(100% / 4);
   }
+  #recently .artists_list .artist:nth-child(5),
+  #recently .artists_list .artist:nth-child(6) {
+    display: none;
+  }
   /* /main */
 
 }
@@ -455,6 +461,10 @@ footer::after {
   /* main */
   .artists_list .artist {
     width: calc(100% / 2);
+  }
+  #recently .artists_list .artist:nth-child(3),
+  #recently .artists_list .artist:nth-child(4) {
+    display: none;
   }
   /* /main */
 
